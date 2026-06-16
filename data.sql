@@ -2,10 +2,12 @@
 -- This file fills the "unemployment" table with the real ONS figures.
 -- Run it AFTER schema.sql.
 --
--- Source: ONS Regional Labour Market bulletin, March 2026.
+-- Source: UK Office for National Statistics (ONS), Regional Labour Market bulletins.
 -- Unemployment rate, people aged 16+, Nov-Jan rolling quarter.
---   year 2026 = Nov 2025 to Jan 2026  (published directly by ONS)
---   year 2025 = Nov 2024 to Jan 2025  (derived: 2026 rate minus ONS annual change)
+--   year 2026 = Nov 2025 to Jan 2026  (ONS bulletin, March 2026)
+--   year 2025 = Nov 2024 to Jan 2025  (ONS bulletin, March 2025)
+-- Both years are taken directly from the published ONS bulletins and
+-- fact-checked against the source.
 
 -- Clear out any existing rows first, so re-running this file
 -- doesn't create duplicates while we're learning.
@@ -35,14 +37,14 @@ INSERT INTO unemployment (region, year, rate) VALUES
 INSERT INTO unemployment (region, year, rate) VALUES
     ('North East',               2025, 4.7),
     ('North West',               2025, 3.9),
-    ('Yorkshire and The Humber', 2025, 4.1),
+    ('Yorkshire and The Humber', 2025, 4.0),
     ('East Midlands',            2025, 4.2),
     ('West Midlands',            2025, 4.5),
     ('East of England',          2025, 4.3),
     ('London',                   2025, 6.3),
     ('South East',               2025, 4.0),
-    ('South West',               2025, 3.4),
-    ('Wales',                    2025, 5.3),
+    ('South West',               2025, 3.5),
+    ('Wales',                    2025, 5.4),
     ('Scotland',                 2025, 3.7),
-    ('Northern Ireland',         2025, 1.6),
+    ('Northern Ireland',         2025, 1.5),
     ('UK',                       2025, 4.4);
