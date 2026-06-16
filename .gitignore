@@ -1,0 +1,7 @@
+# The database file is generated from schema.sql + data.sql,
+# so we don't commit it — anyone can rebuild it (see README).
+*.db
+
+# Editor / OS noise
+.DS_Store
+.claude/
